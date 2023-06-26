@@ -1,0 +1,21 @@
+:root {
+    --primary-header-color: white;
+    --background-color: black;
+    /* --primary-header-color: #ec921d */
+}  
+
+@font-face {
+    font-family: Matisse Pro EB;
+    src: url("../MBE.otf");
+}
+
+
+
+body {
+    background-color: var(--background-color);
+    color: var(--primary-header-color);
+    font-size: 30px;
+    font-weight:1000;
+    font-family: Matisse Pro EB;    
+    /* font-feature-settings:"zero"; */
+}
