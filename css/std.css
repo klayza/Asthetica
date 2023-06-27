@@ -3,8 +3,8 @@
     --background-color: black;
 
     --hover-color: rgb(196, 192, 67);
-    --visited-color: rgb(78, 45, 103);
     --link-color: white;
+    --visited-color: var(--link-color);
     /* --link-color: rgb(107, 50, 151); */
     --icon-color: var(--link-color);
     --background-color-gradient-top: rgb(90, 191, 253);
