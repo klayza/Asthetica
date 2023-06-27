@@ -1,6 +1,10 @@
 :root {
     --primary-header-color: white;
     --background-color: black;
+
+    --hover-color: rgb(196, 192, 67);
+    --visited-color: rgb(78, 45, 103);
+    --link-color: rgb(107, 50, 151);
     /* --primary-header-color: #ec921d */
 }  
 
@@ -18,4 +22,21 @@ body {
     font-weight:1000;
     font-family: Matisse Pro EB;    
     /* font-feature-settings:"zero"; */
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--visited-color)
+}
+
+a:hover {
+    color: var(--hover-color);
+}
+
+.homeIndexCateogry > a {
+    padding: 10px;
 }
