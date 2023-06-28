@@ -1,0 +1,85 @@
+:root {
+    --primary-header-color: white;
+    --background-color: black;
+
+    --hover-color: rgb(196, 192, 67);
+    --link-color: white;
+    --visited-color: var(--link-color);
+    /* --link-color: rgb(107, 50, 151); */
+    --icon-color: var(--link-color);
+    --background-color-gradient-top: rgb(90, 191, 253, 1);
+    --background-color-gradient-bottom: rgb(255, 255, 255);
+    --grid-dot-color-top: rgb(0, 0, 0, .3) 1px;
+    --grid-dot-color-bottom: rgba(0, 0, 0, 0) 1px;
+}  
+
+@font-face {
+    font-family: 'Matisse Pro EB';
+    src: url("../MBE.otf");
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--primary-header-color);
+    font-size: 20px;
+    /* font-size: 30px; */
+    font-weight:1000;
+    font-family: Matisse Pro EB;    
+    background-size: 100vw 100vh;
+    background-image: 
+        linear-gradient(to bottom, var(--background-color-gradient-top), var(--background-color-gradient-bottom)),
+        linear-gradient(to right, rgb(0, 88, 26), orange);
+    z-index: 1;
+}
+
+body:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 10vh 10vh;
+    background-image: radial-gradient(circle, var(--grid-dot-color-top), var(--grid-dot-color-bottom));
+    z-index: -1;  /* place it behind the content */
+}
+
+/* body:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 1vh 1vh;
+    background-image: radial-gradient(circle, rgb(0, 0, 0, .3) 1px, rgba(0, 0, 0, 0) 1px);
+} */
+
+
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--visited-color)
+}
+
+a:hover {
+    color: var(--hover-color);
+}
+
+i {
+    color: var(--icon-color);
+}
+
+.homeIndexCateogories {
+    width: fit-content;
+    border-radius: 20px;
+    background-color: rgb(0, 0, 0, 1);
+}
+
+.homeIndexCateogories > a {
+    padding: 10px;
+}
