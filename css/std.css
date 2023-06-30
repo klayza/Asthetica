@@ -13,7 +13,7 @@
     --background-color-gradient-bottom: rgb(255, 255, 255);
     --grid-dot-color-top: rgb(0, 0, 0, .3) 1px;
     --grid-dot-color-bottom: rgba(0, 0, 0, 0) 1px;
-}  
+}
 
 @font-face {
     font-family: 'Matisse Pro EB';
@@ -28,15 +28,19 @@ body {
     background-color: var(--background-color);
     color: var(--primary-header-color);
     font-size: 20px;
-    /* font-size: 30px; */
-    /* font-weight:1000; */
-    font-family: Matisse Pro EB;    
-    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;     */
+    font-family: Matisse Pro EB;
     background-size: 100vw 100vh;
-    background-image: 
+    background-image:
         linear-gradient(to bottom, var(--background-color-gradient-top), var(--background-color-gradient-bottom)),
         linear-gradient(to right, rgb(0, 88, 26), orange);
     z-index: 1;
+
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 body:before {
@@ -48,7 +52,8 @@ body:before {
     height: 100%;
     background-size: 10vh 10vh;
     background-image: radial-gradient(circle, var(--grid-dot-color-top), var(--grid-dot-color-bottom));
-    z-index: -1;  /* place it behind the content */
+    z-index: -1;
+    /* place it behind the content */
 }
 
 /* body:after {
@@ -87,15 +92,47 @@ main {
 
 .homeIndexCategories {
     width: fit-content;
-    border-radius: 20px;
-    background-color: rgb(0, 0, 0, 1);
-    
+    font-size: 30px;
 }
 
-.homeIndexCateogories > a {
-    padding: 10px;
+.homeIndexCategories > a {
+    color: #313131;
+    font-style: italic;
+    font-weight: 1000;
+    /* font-family: serif; */
+    margin: 30px;
 }
 
-.homeColumn1  {
-    grid-column: 1/2;
+.homeMain {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
 }
+
+.homeTimeline {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto; /* For scroll if the content overflows */
+}
+
+.homeTimeLineItem {
+    margin: 1px;
+    font-size: 12px;
+    float: right;
+}
+
+.timeLineDate {
+    margin: 0px;
+    color:rgb(193, 193, 193)
+}
+
+.homeIndex {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
