@@ -87,16 +87,20 @@ i {
 }
 
 main {
-    display: grid;
+    /* display: grid; */
 }
 
 .homeIndexCategories {
+    text-align: center;
+    margin: 15px auto;
     width: fit-content;
-    font-size: 30px;
+    font-size: 20px;
+    background-color: black;
+    border-radius: 30px;
 }
 
 .homeIndexCategories > a {
-    color: #313131;
+    color: #ffffff;
     font-style: italic;
     font-weight: 1000;
     /* font-family: serif; */
@@ -106,12 +110,12 @@ main {
 .homeMain {
     width: 100%;
     height: 100vh;
-    display: flex;
-    flex-direction: row;
+    /* display: flex; */
+    /* flex-direction: row; */
 }
 
 .homeTimeline {
-    flex: 1;
+    /* flex: 1; */
     padding: 20px;
     overflow-y: auto; /* For scroll if the content overflows */
 }
@@ -128,10 +132,10 @@ main {
 }
 
 .homeIndex {
-    flex: 3;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    /* flex: 3; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
     align-items: center;
     text-align: center;
 }
