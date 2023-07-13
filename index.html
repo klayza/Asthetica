@@ -33,16 +33,44 @@ Art
 About
     Contact
 -->
+    <!-- https://css-tricks.com/dont-overthink-flexbox-grids/ -->
 </head>
 
 <body>
-    <main class="homeMain">
-        <div class="homeIndexCategories">
+    <!-- <div class="homeIndexCategories">
             <a href="memory.html"><i class="fa-solid fa-database"></i> Memory</a>
             <a href="projects.html"><i class="fa-solid fa-microchip"></i> Projects</a>
             <a href="music.html"><i class="fa-solid fa-music"></i> Music</a>
             <a href="art.html"><i class="fa-solid fa-image"></i> Art</a>
             <a href="about.html"><i class="fa-solid fa-user"></i> About</a>
+        </div> -->
+    <div class="mainWindow">
+        <div class="flexGrid">
+            <div class="fcol"></div>
+            <div class="fcol header">
+                <h1>Welcome</h1>
+            </div>
+            <div class="fcol"></div>
+        </div>
+        <div class="flexGrid">
+            <div class="fcol intro">
+                <p>This Is The Website of Clayton Wieberg. I write about science fiction, psychology, and technology. I am a full-time student studying computer science and machine learning.</p>
+            </div>
+        </div>
+        <div class="flexGrid">
+            <div class="fcol context">
+                <p>For information about my site’s philosophy & method, see the About page; for the website features & implementation, see the Design page; for information about myself, my use of other websites, and contact information, see the Links page; for information about new pages, see the Changelog; to receive updates, news, & reviews, subscribe to the newsletter (archives). For an annotated version of this site index page, see the long index.</p>
+            </div>
+            <div class="fcol">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="https://gwern.net/">gwern.net/</a></li>
+                    <li><a href="https://href.cool/">href.cool/</a></li>
+                    <li><a href="https://satyrs.eu/">satyrs.eu/</a></li>
+                    <li><a href="https://everynoise.com/">everynoise.com/</a></li>
+                    <li><a href="https://www.orionsarm.com/">orionsarm.com/</a></li>
+                </ul>
+            </div>
         </div>
         <!-- <section class="homeTimeline">
             <div class="homeTimeLineItem">
@@ -50,11 +78,10 @@ About
                 <p class="timeLineDate">6/29/2023</p>
             </div>
         </section> -->
-    </main>
-    <!-- <h1>NEON GENESIS EVANGELION</h1>
+        <!-- <h1>NEON GENESIS EVANGELION</h1>
     <h2>EP 03</h2> -->
-    <div class="homeStatusBar">
-    </div>
+        <div class="homeStatusBar">
+        </div>
 </body>
 
 </html>

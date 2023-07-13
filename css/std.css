@@ -2,17 +2,19 @@
     --primary-header-color: white;
     --background-color: black;
 
-    --hover-color: rgb(196, 192, 67);
-    --link-color: white;
+    --hover-color: rgb(255, 255, 255);
+    --link-color: rgb(146, 146, 153);
+    /* --link-color: rgb(65, 65, 75); */
     --visited-color: var(--link-color);
-    /* --link-color: rgb(107, 50, 151); */
-    --icon-color: var(--link-color);
+    --icon-color: var();
     /* --background-color-gradient-top: rgb(90, 191, 253, 1);
     --background-color-gradient-bottom: rgb(255, 255, 255); */
-    --background-color-gradient-top: rgb(54, 55, 56);
-    --background-color-gradient-bottom: rgb(255, 255, 255);
+    --background-color-gradient-top: rgb(255, 255, 255);
+    --background-color-gradient-bottom: rgb(143, 143, 143);
     --grid-dot-color-top: rgb(0, 0, 0, .3) 1px;
     --grid-dot-color-bottom: rgba(0, 0, 0, 0) 1px;
+    --standard-text-color: rgb(193, 193, 193);
+    --standard-text-size: 20px;
 }
 
 @font-face {
@@ -25,9 +27,13 @@
 }
 
 body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
     background-color: var(--background-color);
     color: var(--primary-header-color);
-    font-size: 20px;
+    font-size: var(--standard-text-size);
     font-family: Matisse Pro EB;
     background-size: 100vw 100vh;
     background-image:
@@ -35,12 +41,7 @@ body {
         linear-gradient(to right, rgb(0, 88, 26), orange);
     z-index: 1;
 
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    /* min-height: 100vh; */
 }
 
 body:before {
@@ -65,11 +66,11 @@ body:before {
     height: 100%;
     background-size: 1vh 1vh;
     background-image: radial-gradient(circle, rgb(0, 0, 0, .3) 1px, rgba(0, 0, 0, 0) 1px);
+    z-index: -2;
 } */
 
-
-
 a {
+    text-align: left;
     color: var(--link-color);
     text-decoration: none;
 }
@@ -90,17 +91,50 @@ main {
     /* display: grid; */
 }
 
+table {
+    margin: 0px;
+}
+
+img {
+    width: 150px;
+    height: auto;
+}
+
+p {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: var(--standard-text-color);
+    max-width: 50vw;
+}
+
+ul {
+    padding: 0px;
+}
+
+li {
+    list-style: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
 .homeIndexCategories {
     text-align: center;
-    margin: 15px auto;
+    margin: 10px auto;
     width: fit-content;
     font-size: 20px;
-    background-color: black;
+    /* background-color: black; */
+    background: rgba(5, 12, 60) linear-gradient(to bottom, rgb(40, 40, 40), rgb(30, 30, 30));
+
     border-radius: 30px;
 }
 
-.homeIndexCategories > a {
-    color: #ffffff;
+.homeIndexCategories>a {
+    /* color: #ffffff; */
+    color: var(--link-color);
+
     font-style: italic;
     font-weight: 1000;
     /* font-family: serif; */
@@ -108,8 +142,6 @@ main {
 }
 
 .homeMain {
-    width: 100%;
-    height: 100vh;
     /* display: flex; */
     /* flex-direction: row; */
 }
@@ -117,7 +149,8 @@ main {
 .homeTimeline {
     /* flex: 1; */
     padding: 20px;
-    overflow-y: auto; /* For scroll if the content overflows */
+    overflow-y: auto;
+    /* For scroll if the content overflows */
 }
 
 .homeTimeLineItem {
@@ -128,7 +161,7 @@ main {
 
 .timeLineDate {
     margin: 0px;
-    color:rgb(193, 193, 193)
+    color: rgb(193, 193, 193)
 }
 
 .homeIndex {
@@ -140,3 +173,51 @@ main {
     text-align: center;
 }
 
+.header {
+    grid-area: header;
+}
+
+.menu {
+    grid-area: menu;
+    text-align: left;
+}
+
+.menu>img {
+    /* width: 100%; */
+    height: 30%;
+    width: auto;
+}
+
+.right {
+    grid-area: right;
+}
+
+.main {
+    grid-area: main;
+}
+
+.fcol {
+    flex: 1;
+}
+
+.flexGrid {
+    display: flex;
+}
+
+.mainWindow {
+    width: auto;
+    max-height: 100vh;
+    margin: 40px 55px 40px 55px;
+    padding: 10px;
+
+    background: rgba(5, 12, 60) linear-gradient(to bottom, rgb(40, 40, 40), rgb(30, 30, 30));
+    color: rgb(71, 71, 71);
+    border: solid 10px rgb(61, 61, 61);
+
+    border-radius: 15px;
+    text-align: center;
+    font-family: serif;
+    /* height: calc(100vh - 160px); */
+    /* border: solid 10px rgb(35, 5, 91); */
+    /* backdrop-filter: blur(3px); */
+}
