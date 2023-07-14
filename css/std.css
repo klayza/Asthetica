@@ -207,7 +207,7 @@ a:hover {
 .mainWindow {
     width: auto;
     max-height: 100vh;
-    margin: 40px 55px 40px 55px;
+    margin: 40px 5% 40px 5%;
     padding: 10px;
 
     background: rgba(5, 12, 60) linear-gradient(to bottom, rgb(40, 40, 40), rgb(30, 30, 30));
