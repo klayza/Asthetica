@@ -1,0 +1,19 @@
+:root {
+    /* Light mode */
+/* color: rgb(138, 138, 138); */
+/* background: rgb(193, 193, 193); */
+}
+
+body {
+    background: rgb(17, 19, 28) linear-gradient(to bottom, rgb(50, 50, 50), rgb(30, 30, 30));
+    color: rgb(71, 71, 71);
+}
+
+.mainWindow {
+    background-color: rgb(30, 30, 30);
+    margin: 0px;
+    border: none;
+    border-radius: 0px;
+    max-height: none;
+    height: 100%;
+}
