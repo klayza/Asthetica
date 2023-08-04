@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Essays · Website Name</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #sidebar {
+            float: left;
+            width: 20%;
+            background: #f1f1f1;
+            padding: 10px;
+        }
+
+        .sidebar-links a {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        #TOC {
+            float: right;
+            width: 20%;
+            background: #f9f9f9;
+            padding: 10px;
+        }
+
+        #content {
+            margin-left: 25%;
+            margin-right: 25%;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        /* Sample media query */
+        @media (max-width: 600px) {
+
+            #sidebar,
+            #TOC {
+                float: none;
+                width: auto;
+            }
+
+            #content {
+                margin: 10px;
+            }
+        }
+    </style>
+    <header>
+        <h1>Essays</h1>
+    </header>
+    <main>
+        <nav id="sidebar">
+            <a href="#" class="logo">
+                <img src="logo.png" alt="Website Logo">
+            </a>
+            <div class="sidebar-links">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+        </nav>
+        <article>
+            <div id="TOC" class="TOC">
+                <h3>Sections</h3>
+                <ul>
+                    <li><a href="#section1">Section 1</a></li>
+                    <li><a href="#section2">Section 2</a></li>
+                    <li><a href="#section3">Section 3</a></li>
+                </ul>
+            </div>
+            <div id="content">
+                <section id="section1">
+                    <h2>Section 1</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor lectus nibh. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </section>
+                <section id="section2">
+                    <h2>Section 2</h2>
+                    <p>Cras ultricies ligula sed magna dictum porta. Curabitur aliquet quam id dui posuere blandit. Donec rutrum congue leo eget malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </section>
+                <section id="section3">
+                    <h2>Section 3</h2>
+                    <p>Sed porttitor lectus nibh. Vivamus suscipit tortor eget felis porttitor volutpat. Nulla quis lorem ut libero malesuada feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </section>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <p>&copy; 2021 Website Name</p>
+    </footer>
+</body>
+
+</html>

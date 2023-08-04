@@ -7,16 +7,15 @@
     /* --link-color: rgb(65, 65, 75); */
     --visited-color: var(--link-color);
     --icon-color: var();
-    /* --background-color-gradient-top: rgb(90, 191, 253, 1);
-    --background-color-gradient-bottom: rgb(255, 255, 255); */
     --background-color-gradient-top: rgb(255, 255, 255);
     --background-color-gradient-bottom: rgb(143, 143, 143);
     --grid-dot-color-top: rgb(0, 0, 0, .3) 1px;
     --grid-dot-color-bottom: rgba(0, 0, 0, 0) 1px;
-    --standard-text-color: rgb(193, 193, 193);
-    --standard-text-size: 20px;
+    --standard-text-color: rgb(83, 68, 68);
+    --standard-text-size: 25px;
     --input-background-color: rgb(200, 200, 200);
-    --accent-color: gold;
+    --accent-color: rgb(180, 180, 232);
+    --header-color: var(--accent-color);
 }
 
 @font-face {
@@ -42,7 +41,6 @@ body {
         linear-gradient(to bottom, var(--background-color-gradient-top), var(--background-color-gradient-bottom)),
         linear-gradient(to right, rgb(0, 88, 26), orange);
     z-index: 1;
-
     /* min-height: 100vh; */
 }
 
@@ -106,7 +104,7 @@ p {
     margin-left: auto;
     margin-right: auto;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: var(--standard-text-color);
+    font-size: var(--standard-text-size);
     max-width: 50vw;
 }
 
@@ -125,6 +123,11 @@ a:hover {
 input[type="checkbox"] {
     accent-color: var(--accent-color);
     /* background-color: var(--input-background-color); */
+}
+
+h1, h3 {
+    color: var(--header-color);
+    text-align: center;
 }
 
 .homeIndexCategories {
@@ -227,4 +230,31 @@ input[type="checkbox"] {
     /* height: calc(100vh - 160px); */
     /* border: solid 10px rgb(35, 5, 91); */
     /* backdrop-filter: blur(3px); */
+}
+
+.intro {
+    /* color: rgb(180, 180, 180); */
+    border-top: 3px solid var(--accent-color);
+    border-bottom: 3px solid var(--accent-color);
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+    background-image: url(../img/header.jpg);
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-font-smoothing: antialiased;
+}
+
+.context {
+
+    /* background: rgba(84, 84, 84, 0.6); */
+}
+
+.nav {
+    /* background-color: var(--accent-color), opacity(.5); */
+    padding: 0px;
+    text-align: center;
+    margin-bottom: 10px;
 }

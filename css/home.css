@@ -4,12 +4,12 @@
 /* background: rgb(193, 193, 193); */
 }
 
-body {
-    background: rgb(17, 19, 28) linear-gradient(to bottom, rgb(50, 50, 50), rgb(30, 30, 30));
-    color: rgb(71, 71, 71);
-}
+/* body { */
+    /* background: linear-gradient(to bottom, rgb(50, 50, 50), rgb(16, 16, 16)); */
+    /* color: rgb(71, 71, 71);
+} */
 
-.mainWindow {
+/* .mainWindow {
     background-color: rgb(30, 30, 30);
     margin: 0px;
     border: none;
@@ -17,3 +17,9 @@ body {
     max-height: none;
     height: 100%;
 }
+
+.intro {
+    margin: auto;
+    font-size: 30px;
+    color: rgb(71, 71, 71);
+} */

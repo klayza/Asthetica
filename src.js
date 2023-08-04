@@ -24,7 +24,7 @@ function setStyle(colorList) {
     }
     console.log(newStyle)
     target.attr("style", target.attr("style") + "; " + newStyle);
-
+}
 // }
 
 // function sleep(milliseconds) {
