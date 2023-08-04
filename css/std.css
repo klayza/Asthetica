@@ -69,6 +69,11 @@ body:before {
     z-index: -2;
 } */
 
+main {
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: auto;
+}
+
 a {
     text-align: left;
     color: var(--link-color);
