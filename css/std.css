@@ -90,6 +90,7 @@ a:hover {
 
 i {
     color: var(--icon-color);
+    font-size: 32px;
 }
 
 main {
@@ -232,9 +233,6 @@ h1, h3 {
     border-radius: 15px;
     text-align: center;
     font-family: serif;
-    /* height: calc(100vh - 160px); */
-    /* border: solid 10px rgb(35, 5, 91); */
-    /* backdrop-filter: blur(3px); */
 }
 
 .intro {
@@ -253,8 +251,6 @@ h1 {
 }
 
 .context {
-
-    /* background: rgba(84, 84, 84, 0.6); */
 }
 
 .nav {
@@ -263,3 +259,21 @@ h1 {
     text-align: center;
     margin-bottom: 10px;
 }
+
+
+.memoryCard {
+    background-color: purple;
+    margin: 30px 50px 30px 50px;
+
+}
+
+.cardHeader {
+}
+
+.cardHeader i:first-child, .cardHeader h2 {
+    display: inline-block;
+    margin: 10px;
+    /* display: flex; */
+    /* justify-content: space-between; */
+}
+
