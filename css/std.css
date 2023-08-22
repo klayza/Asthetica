@@ -7,20 +7,24 @@
     /* --link-color: rgb(65, 65, 75); */
     --visited-color: var(--link-color);
     --icon-color: var();
-    --background-color-gradient-top: rgb(255, 255, 255);
-    --background-color-gradient-bottom: rgb(143, 143, 143);
+    --background-color-gradient-top: rgb(28, 28, 28);
+    --background-color-gradient-bottom: rgb(38, 30, 59);
+    /* --background-color-gradient-top: rgb(255, 255, 255);
+    --background-color-gradient-bottom: rgb(143, 143, 143); */
     --grid-dot-color-top: rgb(0, 0, 0, .3) 1px;
     --grid-dot-color-bottom: rgba(0, 0, 0, 0) 1px;
     --standard-text-color: rgb(83, 68, 68);
     --standard-text-size: 25px;
+    --italic-color: rgb(150, 150, 150);
     --input-background-color: rgb(200, 200, 200);
     --accent-color: rgb(180, 180, 232);
     --header-color: var(--accent-color);
+    --card-color: rgba(0, 0, 0, 0.6);
 }
 
 @font-face {
     font-family: 'Matisse Pro EB';
-    src: url("../MBE.otf");
+    src: url("../data/MBE.otf");
 }
 
 * {
@@ -28,20 +32,17 @@
 }
 
 body {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    margin: 0px;
+    margin: 0;
     background-color: var(--background-color);
     color: var(--primary-header-color);
     font-size: var(--standard-text-size);
     font-family: Matisse Pro EB;
-    background-size: 100vw 100vh;
+    /* background-position: fixed; */
+    background-size: cover; 
     background-image:
         linear-gradient(to bottom, var(--background-color-gradient-top), var(--background-color-gradient-bottom)),
         linear-gradient(to right, rgb(0, 88, 26), orange);
     z-index: 1;
-    /* min-height: 100vh; */
 }
 
 body:before {
@@ -51,10 +52,9 @@ body:before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-size: 10vh 10vh;
+    background-size: 10vw 10vh;
     background-image: radial-gradient(circle, var(--grid-dot-color-top), var(--grid-dot-color-bottom));
     z-index: -1;
-    /* place it behind the content */
 }
 
 /* body:after {
@@ -70,7 +70,7 @@ body:before {
 } */
 
 main {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 1);
     margin: auto;
 }
 
@@ -94,7 +94,8 @@ i {
 }
 
 main {
-    /* display: grid; */
+    background-color: rgb(150, 150, 150, 0);
+    margin: 40px;
 }
 
 table {
@@ -112,10 +113,6 @@ p {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: var(--standard-text-size);
     max-width: 50vw;
-}
-
-ul {
-    padding: 0px;
 }
 
 li {
@@ -136,67 +133,11 @@ h1, h3 {
     text-align: center;
 }
 
-.homeIndexCategories {
-    text-align: center;
-    margin: 10px auto;
-    width: fit-content;
-    font-size: 20px;
-    /* background-color: black; */
-    background: rgba(5, 12, 60) linear-gradient(to bottom, rgb(40, 40, 40), rgb(30, 30, 30));
 
-    border-radius: 30px;
-}
-
-.homeIndexCategories>a {
-    /* color: #ffffff; */
-    color: var(--link-color);
-
-    font-style: italic;
-    font-weight: 1000;
-    /* font-family: serif; */
-    margin: 30px;
-}
-
-.homeMain {
-    /* display: flex; */
-    /* flex-direction: row; */
-}
-
-.homeTimeline {
-    /* flex: 1; */
-    padding: 20px;
-    overflow-y: auto;
-    /* For scroll if the content overflows */
-}
-
-.homeTimeLineItem {
-    margin: 1px;
-    font-size: 12px;
-    float: right;
-}
-
-.timeLineDate {
-    margin: 0px;
-    color: rgb(193, 193, 193)
-}
-
-.homeIndex {
-    /* flex: 3; */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    align-items: center;
-    text-align: center;
-}
-
-.header {
-    grid-area: header;
-}
-
-.menu {
-    grid-area: menu;
-    text-align: left;
-}
+.blur{
+    overflow:hidden;
+    filter: blur(8px);
+  }
 
 .menu>img {
     /* width: 100%; */
@@ -209,7 +150,7 @@ h1, h3 {
 }
 
 .main {
-    grid-area: main;
+    max-width: 75vw;
 }
 
 .fcol {
@@ -250,9 +191,6 @@ h1 {
     -webkit-font-smoothing: antialiased;
 }
 
-.context {
-}
-
 .nav {
     /* background-color: var(--accent-color), opacity(.5); */
     padding: 0px;
@@ -260,20 +198,66 @@ h1 {
     margin-bottom: 10px;
 }
 
-
-.memoryCard {
-    background-color: purple;
-    margin: 30px 50px 30px 50px;
-
+.group {
+    margin: auto;
+    text-align: center; /* Center the entire group content */
 }
 
-.cardHeader {
-}
-
-.cardHeader i:first-child, .cardHeader h2 {
+.groupHeader {
     display: inline-block;
-    margin: 10px;
-    /* display: flex; */
-    /* justify-content: space-between; */
+    margin: 20px auto; /* Added margin for spacing */
 }
 
+.groupHeader > h2,
+.groupHeader > p {
+    display: inline;
+    margin: 0;
+}
+
+.groupHeader > p {
+    font-size: 17px;
+    font-style: italic; /* Use font-style instead of text-decoration */
+    color: var(--italic-color);
+}
+
+.groupHeader > h2 {
+    width: fit-content;
+    font-size: 35px; /* Increase the font size for h2 */
+    margin-right: 10px; /* Add a small margin between h2 and p */
+}
+
+.card-title {
+    margin-top: 0px;
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+.card-img {
+    width: 100px;
+    height: auto;
+}
+
+.card-description {
+    font-size: 18px;
+}
+
+.card {
+    width: 100%;
+    max-width: 300px; /* Reduced max-width for better responsiveness */
+    padding: 15px; /* Added padding for better spacing */
+    background-color: var(--card-color);
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin: 10px; /* Added margin for spacing between cards */
+}
+
+.card:hover {
+    cursor: pointer;
+    background-color: rgb(19, 19, 19);
+}
+
+.cardView {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap in case of narrow screens */
+    justify-content: center; /* Center the cards within the cardView */
+}

@@ -1,0 +1,68 @@
+{
+    "items": [
+        {
+            "group": "memory",
+            "title": "Favorite Anime",
+            "description": "A list of my favorite anime",
+            "href": "/memory/favoriteAnime.html",
+            "img": "/img/favoriteAnime.png"
+        },
+        {
+            "group": "memory",
+            "title": "Thoughts",
+            "description": "A stream of consciousness",
+            "href": "/memory/thoughts.html",
+            "img": "/img/thoughts.png"
+        },
+        {
+            "group": "projects",
+            "title": "Machine Learning Experiment",
+            "description": "Exploring neural networks",
+            "href": "/projects/machineLearning.html",
+            "img": "/img/machineLearning.png"
+        },
+        {
+            "group": "music",
+            "title": "Favorite Jazz",
+            "description": "My favorite jazz tracks",
+            "href": "/music/favoriteJazz.html",
+            "img": "/img/favoriteJazz.png"
+        },
+        {
+            "group": "art",
+            "title": "Modern Sculptures",
+            "description": "Exploration of 3D art",
+            "href": "/art/modernSculptures.html",
+            "img": "/img/modernSculptures.png"
+        },
+        {
+            "group": "about",
+            "title": "My Philosophy",
+            "description": "Deep insights into my worldview",
+            "href": "/about/myPhilosophy.html",
+            "img": "/img/myPhilosophy.png"
+        }
+    ],
+    "groups": [
+        {
+            "name": "memory",
+            "description": "Thoughts on silicon"
+        },
+        {
+            "name": "projects",
+            "description": "Some of my programming projects"
+        },
+        {
+            "name": "music",
+            "description": "Tune in and find something you like"
+        },
+        {
+            "name": "art",
+            "description": "For eye stimulation"
+        },
+        {
+            "name": "about",
+            "description": "This... might get personal"
+        }
+    ]
+}

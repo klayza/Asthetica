@@ -1,10 +1,39 @@
 const showIcons = false;
 $(document).ready(function () {
-    if (!showIcons) { $("a i").hide(); }
-})
+    $.getJSON('data/db.json', function (data) {
+        $.each(data.groups, function (i, group) {
+            var groupName = group.name.charAt(0).toUpperCase() + group.name.slice(1); 
+            var groupDiv = $('<div>').addClass('group');
+            
+            var groupHeader = $('<div>').addClass('groupHeader');
+            var groupTitle = $('<h2>').text(groupName);
+            var groupDescription = $('<p>').text(group.description);
+            groupHeader.append(groupTitle, groupDescription);
+            groupDiv.append(groupHeader);
+            
+            var cardView = $('<div>').addClass('cardView flexGrid'); 
+            $.each(data.items, function (j, item) {
+                if (item.group === group.name) {
+                    var card = $('<div>').addClass('card').attr("onclick", `changePage('${item.href}')`);
+                    var img = $('<img>').attr('src', item.img).addClass('card-img');
+                    var title = $('<h3>').text(item.title).addClass('card-title'); 
+                    var description = $('<p>').text(item.description).addClass('card-description');
+                    card.append(img, title, description);
+                    cardView.append(card);
+                }
+            });
+            
+            groupDiv.append(cardView); 
+            $('body').append(groupDiv);
+        });
+    });
+});
 
 
-
+function changePage(href) {
+    // Change the current page's location to the specified href
+    window.location.href = href;
+}
 // const css = "background-image:linear-gradient(to bottom, black, red);"
 // // const css = "background-image:linear-gradient(to bottom, rgb($r1, $g1, $b1), rgb($r2, $g2, $b2));"
 // for (var r = 0; r < 256; r++) {
