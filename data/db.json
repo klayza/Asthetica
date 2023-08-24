@@ -46,11 +46,11 @@
     "groups": [
         {
             "name": "memory",
-            "description": "Thoughts on silicon"
+            "description": "Thoughts embedded in silicon"
         },
         {
             "name": "projects",
-            "description": "Some of my programming projects"
+            "description": "Programming projects"
         },
         {
             "name": "music",
