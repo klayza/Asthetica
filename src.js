@@ -1,5 +1,10 @@
 const showIcons = false;
 $(document).ready(function () {
+    if (!showIcons) {
+        $("i").hide();
+    }
+
+    
     $.getJSON('data/db.json', function (data) {
         $.each(data.groups, function (i, group) {
             var groupName = group.name.charAt(0).toUpperCase() + group.name.slice(1); 
@@ -24,8 +29,10 @@ $(document).ready(function () {
             });
             
             groupDiv.append(cardView); 
+            groupDiv.append($("<hr>")); 
             $('body').append(groupDiv);
         });
+        $(document).find("hr").eq(-1).remove();
     });
 });
 

@@ -12,11 +12,11 @@
             "title": "Thoughts",
             "description": "A stream of consciousness",
             "href": "/memory/thoughts.html",
-            "img": "/img/thoughts.png"
+            "img": "/img/brain.png"
         },
         {
             "group": "projects",
-            "title": "Machine Learning Experiment",
+            "title": "Machine Learning Experiments",
             "description": "Exploring neural networks",
             "href": "/projects/machineLearning.html",
             "img": "/img/machineLearning.png"
