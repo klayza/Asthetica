@@ -9,6 +9,13 @@
         },
         {
             "group": "memory",
+            "title": "Frog Stream",
+            "description": "Help me keep an eye on these buggas",
+            "href": "/memory/frogStream.html",
+            "img": "https://02d8-184-101-16-225.ngrok-free.app/video"
+        },
+        {
+            "group": "memory",
             "title": "Thoughts",
             "description": "A stream of consciousness",
             "href": "/memory/thoughts.html",
